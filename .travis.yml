@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f -t jonyhay/docker-react Dockerfile.dev .
+  - docker build -f Dockerfile.dev -t jonyhay/docker-react .
 
 script:
   - docker run jonyhay/docker-react npm run test -- --coverage
